@@ -1,0 +1,8 @@
+hfix fxjp nvhh diwe
+app password
+
+
+
+/usr/bin/python3.13 -m pip install --break-system-packages PyQt6 opencv-python openpyxl moviepy pygame pypdf reportlab google-api-python-client google-auth-httplib2 google-auth-oauthlib tensorflow pillow numpy psutil pyserial
+
+/usr/bin/python3.13 -m pip install --break-system-packages PyQt6 openpyxl moviepy pygame pypdf reportlab google-api-python-client google-auth-httplib2 google-auth-oauthlib subprocess numpy psutil pyserial

@@ -1,0 +1,27 @@
+pygame 2.6.1 (SDL 2.28.4, Python 3.13.5)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[0:18:54.284911883] [3108]  INFO Camera camera_manager.cpp:340 libcamera v0.7.1+rpt20260429
+[0:18:54.293890488] [3115]  INFO RPI pisp.cpp:720 libpisp version v1.5.0 01-05-2026 (05:33:53)
+[0:18:54.302609501] [3115]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/pisp/imx477.json
+[0:18:54.310486299] [3115]  INFO Camera camera_manager.cpp:223 Adding camera '/base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a' for pipeline handler rpi/pisp
+[0:18:54.310524355] [3115]  INFO RPI pisp.cpp:1181 Registered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a to CFE device /dev/media0 and ISP device /dev/media1 using PiSP variant BCM2712_D0
+[0:18:54.312949225] [3115]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc30
+[0:18:54.312970278] [3115]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc12
+[0:18:54.313407125] [3108]  INFO Camera camera.cpp:1216 configuring streams: (0) 4056x3040-RGB888/sRGB (1) 4056x3040-BGGR_PISP_COMP1/RAW
+[0:18:54.313502878] [3115]  INFO RPI pisp.cpp:1485 Sensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a - Selected sensor format: 4056x3040-SBGGR12_1X12/RAW - Selected CFE format: 4056x3040-PC1B/RAW
+[0:20:18.234991242] [3154]  INFO Camera camera_manager.cpp:340 libcamera v0.7.1+rpt20260429
+[0:20:18.243506153] [3161]  INFO RPI pisp.cpp:720 libpisp version v1.5.0 01-05-2026 (05:33:53)
+[0:20:18.251827365] [3161]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/pisp/imx477.json
+[0:20:18.258922477] [3161]  INFO Camera camera_manager.cpp:223 Adding camera '/base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a' for pipeline handler rpi/pisp
+[0:20:18.258953961] [3161]  INFO RPI pisp.cpp:1181 Registered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a to CFE device /dev/media0 and ISP device /dev/media1 using PiSP variant BCM2712_D0
+[0:20:18.261311459] [3161]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc30
+[0:20:18.261333448] [3161]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc12
+[0:20:18.261766711] [3154]  INFO Camera camera.cpp:1216 configuring streams: (0) 4056x3040-RGB888/sRGB (1) 4056x3040-BGGR_PISP_COMP1/RAW
+[0:20:18.261860053] [3161]  INFO RPI pisp.cpp:1485 Sensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx477@1a - Selected sensor format: 4056x3040-SBGGR12_1X12/RAW - Selected CFE format: 4056x3040-PC1B/RAW
+/home/oncovue/.local/lib/python3.13/site-packages/tensorflow/lite/python/interpreter.py:457: UserWarning:     Warning: tf.lite.Interpreter is deprecated and is scheduled for deletion in
+    TF 2.20. Please use the LiteRT interpreter from the ai_edge_litert package.
+    See the [migration guide](https://ai.google.dev/edge/litert/migration)
+    for details.
+    
+  warnings.warn(_INTERPRETER_DELETION_WARNING)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

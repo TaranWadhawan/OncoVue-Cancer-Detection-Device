@@ -1,0 +1,65 @@
+To make your PyQt6 application start automatically on boot as a Linux desktop startup program, the most reliable and industry-standard method (especially for modern systems like the Raspberry Pi 5 running Wayland/Labwc or X11) is using the **XDG Autostart Specification**.
+
+This requires a simple two-step configuration: a shell launcher script and an autostart desktop entry.
+
+---
+
+### Step 1: Create the Launcher Script (`launcher.sh`)
+
+Create a file named `launcher.sh` in your project directory (e.g., `/home/pi/Downloads/O/`). This script ensures the working directory is set correctly so that relative Excel database, image, and report paths do not break.
+
+```bash
+#!/bin/bash
+cd /home/pi/Downloads/O
+python3 main.py
+```
+
+_(Note: Change `/home/pi/Downloads/O` to the exact path of your project directory if it is located elsewhere)._
+
+---
+
+### Step 2: Make the Launcher Script Executable
+
+Open your Linux terminal and run the following command to grant execution permissions to the launcher script:
+
+```bash
+chmod +x /home/pi/Downloads/O/launcher.sh
+```
+
+---
+
+### Step 3: Create the Autostart Desktop Entry
+
+XDG desktop environments automatically search the `~/.config/autostart/` folder for startup scripts upon desktop initialization.
+
+1. Create the autostart folder if it does not already exist:
+
+   ```bash
+   mkdir -p ~/.config/autostart
+   ```
+
+2. Create a file named `oncovue.desktop` inside that folder:
+
+   ```bash
+   nano ~/.config/autostart/oncovue.desktop
+   ```
+
+3. Paste the following configuration inside `oncovue.desktop`:
+
+```ini
+[Desktop Entry]
+Type=Application
+Name=OncoVue Application
+Exec=/bin/bash /home/pi/Downloads/O/launcher.sh
+Terminal=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+```
+
+4. Save and exit (in Nano, press `Ctrl+O`, `Enter`, then `Ctrl+X`).
+
+---
+
+### How it Works
+
+When your Linux machine boots up, it initializes the display server (X11 or Wayland). Once the desktop environment loads, it processes the `.desktop` file, executes the `launcher.sh` script, changes the directory to your project folder, and opens `main.py` automatically. From `main.py`, all subsequent subprocess transitions (`page1.py`, `page2.py`, analysis pages, export pages) will execute seamlessly.
